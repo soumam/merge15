@@ -1,18 +1,9 @@
-
-function readTextFile()
-{
-	var rawFile = new XMLHttpRequest();
-	rawFile.open("GET", "IntegerArray.txt", true);
-	rawFile.onreadystatechange = function ()
-	{
-		if(rawFile.readyState === 4)
-		{
-            if(rawFile.status === 200 || rawFile.status == 0)
-            {
-                var allText = rawFile.responseText;
-                alert(allText);
-            }	
-		}
+fs = require('fs');
+fs.readFile('/Users/soumamondal/DEV/js/merge/IntegerArray.txt', 
+			'utf8', function (err, data) {
+	if (err) {
+		return console.log(err);
 	}
-	rawFile.send(null);
-}
+	console.log(data);
+});
+
