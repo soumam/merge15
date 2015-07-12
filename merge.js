@@ -18,7 +18,6 @@ function mergeSort(arr)
  
 function merge(left, right)
 {
-	console.log(left +"-----"+right);
     var result = [];
  
     while (left.length && right.length) {
@@ -26,7 +25,6 @@ function merge(left, right)
             result.push(left.shift());
         } else {
             result.push(right.shift());
-            console.log("Inversions: " + left.length);
             inversions += left.length;
         }
     }
@@ -39,6 +37,7 @@ function merge(left, right)
  
     return result;
 }
- 
-console.log(mergeSort(hm_example));
+
+
+console.log(mergeSort(a));
 console.log("Inversions: " + inversions);
