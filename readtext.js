@@ -1,9 +1,16 @@
 fs = require('fs');
-fs.readFile('/Users/soumamondal/DEV/js/merge/IntegerArray.txt', 
-			'utf8', function (err, data) {
+
+var output;
+//Asynchronous file-reading. 
+//This is basically a super simple callback function
+/*
+fs.readFile('IntegerArray.txt', 'utf8', function (err, data) {
 	if (err) {
 		return console.log(err);
 	}
-	console.log(data);
-});
+ 	lines = data.split('\r\n').slice(0,100000);
+	return lines;
+});*/
 
+output = fs.readFileSync('IntegerArray.txt', 'utf8').split('\r\n').slice(0,100000);
+console.log(output);
