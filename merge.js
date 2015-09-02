@@ -1,3 +1,7 @@
+// SOUMA
+// merge.js
+// counts inversion in an input file
+// utilizes merge sort to count inversions
 
 
 var a = [34, 203, 3, 746, 200, 984, 198, 764, 9];
